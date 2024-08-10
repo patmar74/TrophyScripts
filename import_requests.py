@@ -29,7 +29,8 @@ class PsnpTrophyAnalyzer(object):
         self.gameLinkToInfoMap = {}
 
     def getUserAgents(self):
-        SCRAPEOPS_API_KEY = "1bdb12dc-c6ce-4886-aeea-dfcaba4893a9"
+        # Get the scrape ops api key by signing up for a free community account https://scrapeops.io/
+        SCRAPEOPS_API_KEY = ""
         response = requests.get('http://headers.scrapeops.io/v1/user-agents?api_key=' + SCRAPEOPS_API_KEY)
         json_response = response.json()
         self.userAgentList = json_response.get('result', [])
